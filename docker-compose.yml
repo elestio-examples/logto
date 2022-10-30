@@ -17,7 +17,7 @@ services:
       - NODE_ENV=production
   postgres:
     restart: always
-    image: postgres:14
+    image: postgres:14-alpine
     user: postgres
     environment:
       POSTGRES_USER: postgres
