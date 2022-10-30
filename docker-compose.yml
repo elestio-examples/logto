@@ -6,7 +6,7 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    image: ghcr.io/logto-io/logto:${TAG-latest}
+    image: ghcr.io/logto-io/logto:prerelease
     entrypoint: ["sh", "-c", "npm run cli db seed -- --swe && npm start"]
     ports:
       - 172.17.0.1:3001:3001
