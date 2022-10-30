@@ -11,12 +11,13 @@ services:
     ports:
       - 172.17.0.1:3001:3001
     environment:
-      - TRUST_PROXY_HEADER=1
+      - TRUST_PROXY_HEADER=true
       - DB_URL=postgres://postgres:p0stgr3s@postgres:5432/logto
       - ENDPOINT=https://${DOMAIN}
+      - NODE_ENV=production
   postgres:
     restart: always
-    image: postgres:14-alpine
+    image: postgres:14
     user: postgres
     environment:
       POSTGRES_USER: postgres
