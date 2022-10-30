@@ -13,7 +13,7 @@ services:
     environment:
       - TRUST_PROXY_HEADER=1
       - DB_URL=postgres://postgres:p0stgr3s@postgres:5432/logto
-      - ENDPOINT=${DOMAIN}
+      - ENDPOINT=https://${DOMAIN}
   postgres:
     restart: always
     image: postgres:14-alpine
