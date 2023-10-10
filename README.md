@@ -10,5 +10,14 @@ Deploy Logto server with CI/CD on Elestio
 
 # Once deployed ...
 
-    Login: [ADMIN_EMAIL]
+You can open Logto Admin here:
+
+    URL: https://[CI_CD_DOMAIN]:8504
+    email: admin
+    password: [ADMIN_PASSWORD]
+
+You can open Logto here:
+
+    URL: https://[CI_CD_DOMAIN]
+    email: admin
     password: [ADMIN_PASSWORD]
