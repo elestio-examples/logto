@@ -21,3 +21,9 @@ You can open Logto here:
     URL: https://[CI_CD_DOMAIN]
     email: admin
     password: [ADMIN_PASSWORD]
+
+You can open pgAdmin web UI here:
+
+    URL: https://[CI_CD_DOMAIN]:37927
+    email: [ADMIN_EMAIL]
+    password: [ADMIN_PASSWORD]

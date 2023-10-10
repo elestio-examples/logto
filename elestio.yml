@@ -15,6 +15,21 @@ ports:
     public: true
     path: "/"
     isAuth: false
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "37927"
+    targetPort: "51032"
+    targetIP: "172.17.0.1"
+    public: true
+    path: "/"
+    isAuth: false
+  - protocol: "TCP"
+    targetProtocol: "TCP"
+    listeningPort: "42494"
+    targetIP: "172.17.0.1"
+    targetPort: "27115"
+    public: true
+
 environments:
   - key: ADMIN_PASSWORD
     value: "random_password"
@@ -50,5 +65,9 @@ webUI:
     password: "[ADMIN_PASSWORD]"
   - url: "https://[CI_CD_DOMAIN]"
     label: "Logto"
+    login: "[ADMIN_EMAIL]"
+    password: "[ADMIN_PASSWORD]"
+  - url: "https://[CI_CD_DOMAIN]:37927"
+    label: "PgAdmin"
     login: "[ADMIN_EMAIL]"
     password: "[ADMIN_PASSWORD]"
