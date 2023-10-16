@@ -5,4 +5,4 @@ set -o allexport; source .env; set +o allexport;
 echo "Waiting for software to be ready ..."
 sleep 30s;
 
-docker-compose exec -T app sh -c "npm run cli db seed -- --swe && npm start"
+docker-compose exec -T app sh -c "npm run cli db seed"
