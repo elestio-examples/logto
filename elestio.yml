@@ -61,8 +61,6 @@ lifeCycleConfig:
 webUI:
   - url: "https://[CI_CD_DOMAIN]:8504"
     label: "Logto Admin"
-    login: "[ADMIN_EMAIL]"
-    password: "[ADMIN_PASSWORD]"
   - url: "https://[CI_CD_DOMAIN]:37927"
     label: "PgAdmin"
     login: "[ADMIN_EMAIL]"
