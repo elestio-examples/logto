@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   app:
-    image: svhd/logto:latest
+    image: svhd/logto:${SOFTWARE_VERSION_TAG}
     restart: always
     depends_on:
       - postgres
