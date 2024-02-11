@@ -1,5 +1,16 @@
 version: "3.9"
 services:
+  alteration:
+    image: svhd/logto:${SOFTWARE_VERSION_TAG}
+    restart: 'no'
+    depends_on:
+      - postgres
+    entrypoint: ["sh", "-c", "npm run alteration deploy latest"]
+    environment:
+      - DB_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/logto
+      - ENDPOINT=https://${DOMAIN}
+      - ADMIN_ENDPOINT=https://${DOMAIN}:8504
+      - NODE_ENV=production
   app:
     image: svhd/logto:${SOFTWARE_VERSION_TAG}
     restart: always
