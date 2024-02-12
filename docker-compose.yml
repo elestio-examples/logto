@@ -39,7 +39,7 @@ services:
       - 172.17.0.1:27115:5432
 
   pgadmin4:
-    image: dpage/pgadmin4:latest
+    image: elestio/pgadmin:latest
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: ${ADMIN_EMAIL}
