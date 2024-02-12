@@ -10,6 +10,7 @@ if [ -e "./initialized" ]; then
 else
     docker-compose exec -T app sh -c "npm run cli db seed"
     docker-compose exec -T app sh -c "npm run alteration deploy latest"
-    sed -i "s~# ~~g" ./docker-compose.yml
     touch "./initialized"
 fi
+
+sed -i "s~# ~~g" ./docker-compose.yml
