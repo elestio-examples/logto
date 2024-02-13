@@ -16,7 +16,7 @@ services:
     restart: always
     depends_on:
       - postgres
-    entrypoint: ["sh", "-c", "npm start"]
+    entrypoint: ["sh", "-c", "npm run cli db seed && npm start"]
     ports:
       - 172.17.0.1:33267:3001
       - 172.17.0.1:55089:3002
