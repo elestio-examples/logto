@@ -14,3 +14,7 @@ else
 fi
 
 sed -i "s~# ~~g" ./docker-compose.yml
+
+docker-compose down;
+docker-compose up -d;
+sleep 30s;
