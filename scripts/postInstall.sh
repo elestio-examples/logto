@@ -14,6 +14,8 @@ else
 fi
 
 sed -i "s~# ~~g" ./docker-compose.yml
+sed -i "s~DOMAIN_TO_CHANGE~${DOMAIN}~g" ./docker-compose.yml
+sed -i "s~0.0.0.0~${IP}~g" ./docker-compose.yml
 
 docker-compose down;
 docker-compose up -d;
