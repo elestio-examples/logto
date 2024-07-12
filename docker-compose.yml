@@ -26,6 +26,8 @@ services:
       - ENDPOINT=https://${DOMAIN}
       - ADMIN_ENDPOINT=https://${DOMAIN}:8504
       - NODE_ENV=production
+    extra_hosts:
+      - "DOMAIN_TO_CHANGE:0.0.0.0"
   postgres:
     image: elestio/postgres:15
     restart: always
