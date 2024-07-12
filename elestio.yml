@@ -43,7 +43,8 @@ environments:
     value: "postgres"
   - key: POSTGRES_PASSWORD
     value: "random_password"
-
+  - key: "IP"
+    value: "[IP]"
 config:
   runTime: "dockerCompose"
   version: ""
